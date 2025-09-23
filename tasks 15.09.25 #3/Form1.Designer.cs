@@ -43,7 +43,7 @@ namespace tasks_15._09._25__3
             labelTime.Name = "labelTime";
             labelTime.Size = new Size(126, 54);
             labelTime.TabIndex = 0;
-            labelTime.Text = "00:00";
+            labelTime.Text = "00:00:00";
             labelTime.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // buttonStart
