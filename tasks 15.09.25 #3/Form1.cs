@@ -21,6 +21,7 @@ namespace tasks_15._09._25__3
             seconds = 0;
             milliseconds = 0;
             labelTime.Text = "00:00:00";
+            listBox1.Items.Clear();
             timer1.Start();
         }
 
@@ -46,6 +47,26 @@ namespace tasks_15._09._25__3
             }
 
             labelTime.Text = $"{minutes:D2}:{seconds:D2}:{milliseconds / 10:D2}";
+        }
+
+        private void pause_Click(object sender, EventArgs e)
+        {
+            if (timer1.Enabled)
+            {
+                timer1.Stop();
+                pause.Text = "Продолжить";
+            }
+            else
+            {
+                timer1.Start();
+                pause.Text = "Пауза";
+            }
+        }
+
+        private void save_Click(object sender, EventArgs e)
+        {
+            string lapTime = $"{minutes:D2}:{seconds:D2}:{milliseconds / 10:D2}";
+            listBox1.Items.Add(lapTime);
         }
     }
 }
